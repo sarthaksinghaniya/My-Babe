@@ -1,13 +1,11 @@
-// script.js
-
 const paragraphs = [
-  `BABE HAPPY GIRLFRIEND DAY \"WIFEY\"!!!\n
+  `BABE HAPPY GIRLFRIEND DAY "WIFEY"!!!\n
 you know you mean a lot for me i really love you and these 1.5 year with you and almost 5 month seeing you as mine was something best 
-Hn kbhi kbhi me thoda ganda bacha bn jata hu but yes hu tho apka hi na hehe \"mommy\"
+Hn kbhi kbhi me thoda ganda bacha bn jata hu but yes hu tho apka hi na hehe "mommy"
 dekho hn raat me bt ni kr pata but yr mn bht krta h late night gossips ka apko pyr krne ka romance krne ka and all but chota hu na me 
 tho yes meri pooku i love you and this is smtg i wrote for you hope you will love`,
 
-  `\"The Moment the Universe Changed 🌌\"\n
+  `"The Moment the Universe Changed 🌌"\n
 10 March 2025, 8:46:07 pm —
 The universe didn’t shout, but my world shifted.
 In that quiet moment, your name echoed in my soul.
@@ -29,14 +27,13 @@ Har pal tu yaad aati hai 💖
 Tere saath bitaye har lamhe ko dil mein sajaya hai ❤️
 Jitna pyaar tujhe karti hoon, utna khud se bhi nahi kiya 💌`,
 
-  `\"To the Moon I Said...\" 🌙❤
+  `"To the Moon I Said..." 🌙❤
 I looked up at the moon last night, full and glowing.
 I whispered, “You’re beautiful.”
 The moon smiled and said,
 “She exists, doesn’t she?”
 And in that moment, even the moon felt small.`
 ];
-
 
 const images = [
   "img1.jpg",
@@ -62,7 +59,6 @@ function startSlides() {
     } else {
       imgTag.style.transform = "rotateX(0deg)";
     }
-    // 💓 Apply heartbeat to image
     imgTag.classList.remove("heartbeat");
     void imgTag.offsetWidth;
     imgTag.classList.add("heartbeat");
@@ -71,9 +67,7 @@ function startSlides() {
   paraInterval = setInterval(() => {
     paraIndex = (paraIndex + 1) % paragraphs.length;
     textTag.innerHTML = paragraphs[paraIndex];
-    speak(paragraphs[paraIndex]);
 
-    // 💫 Apply fade + glow to text
     textTag.classList.remove("fade-scale", "slide-glow");
     void textTag.offsetWidth;
     textTag.classList.add("fade-scale", "slide-glow");
@@ -130,7 +124,7 @@ function checkUnlock() {
 
     startSlides();
     triggerFireworks();
-    setTimeout(showSecretMessage, 180000); // after 3 minutes
+    setTimeout(showSecretMessage, 180000); // 3 minutes
   } else {
     document.getElementById("unlockMsg").innerText =
       "That's not the day we met... try again 😔";
@@ -169,13 +163,6 @@ function triggerFireworks() {
     }
     animate();
   }
-}
-
-function speak(text) {
-  const msg = new SpeechSynthesisUtterance(text);
-  msg.rate = 0.9;
-  msg.pitch = 1.2;
-  window.speechSynthesis.speak(msg);
 }
 
 function showSecretMessage() {
