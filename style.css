@@ -1,0 +1,186 @@
+/* style.css */
+
+body {
+  margin: 0;
+  font-family: 'Caveat', cursive;
+  background: linear-gradient(to bottom right, #ffe0ec, #ffd6ff);
+  overflow-x: hidden;
+  color: #222;
+  text-align: center;
+}
+
+.unlock-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffeff7;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.unlock-box {
+  background: #ffffffcc;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 25px #ffb3d9;
+  max-width: 400px;
+  width: 90%;
+}
+
+.unlock-box input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  border: 2px solid #ff99cc;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.unlock-box button {
+  background: #ff66b2;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.unlock-box button:hover {
+  background: #e60073;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #cc0066;
+}
+
+#timer {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.image-box {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 128, 171, 0.4);
+  margin-bottom: 1.5rem;
+  height: 400px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s ease;
+  border-radius: 2rem;
+}
+
+.paragraph-box {
+  background: #fff0f5;
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 15px #ffcce5;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#controls button {
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #ff99cc;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#controls button:hover {
+  background-color: #cc0066;
+}
+
+#fireworksCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#secretMessage {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff0f5;
+  color: #cc0066;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px pink;
+  z-index: 9999;
+  display: none;
+}
+
+canvas {
+  pointer-events: none;
+}
+
+/* ❤️ Animation: Heartbeat for image */
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.08); }
+  40% { transform: scale(0.98); }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* 💞 Animation: Fade-scale for text */
+.fade-scale {
+  animation: fadeScale 1.2s ease forwards;
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ✨ Animation: Slide-glow for text */
+.slide-glow {
+  animation: slideGlow 1.5s ease forwards;
+}
+
+@keyframes slideGlow {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+    text-shadow: none;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    text-shadow: 0 0 15px #ff99cc;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moments With You 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- 🔐 Unlock Screen -->
+  <div id="unlockScreen" class="unlock-screen">
+    <div class="unlock-box">
+      <h2>Unlock Our Love 💘</h2>
+      <input type="text" id="unlockInput" placeholder="Enter the day..." />
+      <button onclick="checkUnlock()">Unlock</button>
+      <p id="unlockMsg" style="color:#cc0066; font-style:italic;"></p>
+    </div>
+  </div>
+
+  <!-- 💕 Main App -->
+  <div id="mainApp" style="display:none;">
+    <div class="container">
+      <h1>Moments With You 💖</h1>
+      <div id="timer">Since: <span id="timeCount"></span></div>
+
+      <div class="image-box">
+        <img id="slideshow" src="static/images/img1.jpg" alt="us"  />
+      </div>
+
+      <div class="paragraph-box" id="romanticText">
+        Loading feelings...
+      </div>
+
+      <div id="controls">
+        <button onclick="pauseSlides()">Pause Slides</button>
+        <button onclick="resumeSlides()">Resume Slides</button>
+        <button onclick="toggleMusic()">Play/Pause Music</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔊 Music -->
+  <audio id="bgMusic" src="static/music/bg.mp3" loop autoplay></audio>
+
+  <!-- 🎆 Fireworks Canvas -->
+  <canvas id="fireworksCanvas"></canvas>
+
+  <!-- 🎁 Secret Message -->
+  <div id="secretMessage"></div>
+
+  <!-- 🔗 Scripts -->
+  <script src="romantic_lines.js" defer></script>
+  <script src="script.js" ></script>
+</body>
+</html>
